@@ -45,6 +45,25 @@ To maintain code readability and consistency, please adhere to the following gui
 - Follow the existing code formatting and indentation patterns.
 - Write clear and concise commit messages.
 
+# TECH 😎
+**WEBAPP PART**<br>
+FrontEnd: HTML,CSS,BOOTSTRAP, JS,JQUERY <br>
+BackEnd: PHP <br>
+DB : MYSQL
+
+**Mobile App Part**<br>
+- 
+FrontEnd: Fluter ✅
+<br>
+
+**Other Tools**
+- Hive
+- Provider
+- Shared Pref
+- Dio/http
+
+
+
 **Cheers😄!, Let's Code Together**
 
 
