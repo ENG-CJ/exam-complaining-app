@@ -72,8 +72,8 @@ FrontEnd: Fluter ✅
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Miirshe"><img src="https://avatars.githubusercontent.com/u/126691024?v=4" width="100px;" alt=""/><br /><sub><b>
       ENG MIIRSHE</b></sub></a><br /> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
-       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Miirshe"><img src="https://avatars.githubusercontent.com/u/126691024?v=4" width="100px;" alt=""/><br /><sub><b>
-      ENG MIIRSHE</b></sub></a><br /> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ENG-CJ"><img src="https://avatars.githubusercontent.com/u/77126546?s=400&u=b0f7128cfbf8508f2a8c313f83f05a6b56b2e307&v=4" width="100px;" alt=""/><br /><sub><b>
+      ENG CJ</b></sub></a><br /> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
     </tr>
  
     
