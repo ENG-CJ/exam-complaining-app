@@ -70,8 +70,13 @@ FrontEnd: Fluter ✅
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/126691024?v=4" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="#question-kentcdodds" title="Answering Questions">💬</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=kentcdodds" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Akentcdodds" title="Reviewed Pull Requests">👀</a> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
-</tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Miirshe"><img src="https://avatars.githubusercontent.com/u/126691024?v=4" width="100px;" alt=""/><br /><sub><b>
+      ENG MIIRSHE</b></sub></a><br /> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Miirshe"><img src="https://avatars.githubusercontent.com/u/126691024?v=4" width="100px;" alt=""/><br /><sub><b>
+      ENG MIIRSHE</b></sub></a><br /> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
+    </tr>
     
   </tbody>
 </table>
