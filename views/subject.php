@@ -1,0 +1,18 @@
+<?php
+include '../config/header.php';
+include '../config/sidebar.php';
+?>
+
+<div class="dashboard-wrapper">
+    <div class="dashboard-ecommerce">
+        <div class="container-fluid dashboard-content">
+
+        </div>
+    </div>
+
+
+<script src="../js/subject.js"></script>
+
+<?php
+include '../config/footer.php';
+?>
