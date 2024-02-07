@@ -47,34 +47,10 @@ include '../config/sidebar.php';
                             </div>
                         </div>
                         <div class="table-responsive mt-2">
-                            <table class="table table-striped table-bordered first">
+                            <table class="table table-striped table-bordered first" id="tableData">
                                 <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Cedric Kelly</td>
-                                        <td>Senior Javascript Developer</td>
-                                        <td>Edinburgh</td>
-                                        <td>22</td>
-                                        <td>2012/03/29</td>
-                                        <td>$433,060</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Airi Satou</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>33</td>
-                                        <td>2008/11/28</td>
-                                        <td>$162,700</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -94,18 +70,20 @@ include '../config/sidebar.php';
                     <div class="modal-body">
                         <form id="semesterForm">
                             <div class="form-group">
+                                <input id="s_id" name="s_id" type="number" class="form-control p-3" readonly>
+                            </div>
+                            <div class="form-group">
                                 <label for="name" class="col-form-label">Name</label>
                                 <input id="name" name="name" type="text" class="form-control p-3" placeholder="Enter Semester Name">
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea name="description" id="description" cols="30" rows="8" placeholder="Enter Semester Description" 
-                                class="form-control p-3">
+                                <textarea name="description" id="description" cols="30" rows="8" placeholder="Enter Semester Description" class="form-control p-2">
                                 </textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">Close</button>
-                                <button type="button" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </form>
                     </div>

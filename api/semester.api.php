@@ -36,8 +36,8 @@ class Semester extends DatabaseConnection
         $result = $conn->query($query);
 
         if ($result) {
-            if ($row = $result->fetch_assoc()) {
-                $data = $row;
+            while($row = $result->fetch_assoc()) {
+                $data []= $row;
             }
             $response = ['status' => true, 'data' => $data];
         } else {
@@ -59,8 +59,8 @@ class Semester extends DatabaseConnection
             $result = $conn->query($query);
 
             if ($result) {
-                if ($row = $result->fetch_assoc()) {
-                    $data = $row;
+                 while($row = $result->fetch_assoc()) {
+                    $data []= $row;
                 }
                 $response = ['status' => true, 'data' => $data];
             } else {
