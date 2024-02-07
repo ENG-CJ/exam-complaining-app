@@ -48,6 +48,25 @@ class Classes extends DatabaseConnection
 
         echo json_encode($response);
     }
+    public function readClasses($conn)
+    {
+        $response = [];
+        $data = [];
+
+        $query = "SELECT * FROM classes";
+        $result = $conn->query($query);
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $data []= $row;
+            }
+            $response = ['status' => true, 'data' => $data];
+        } else {
+            $response = ['status' => false, 'data' => $conn->error];
+        }
+
+        echo json_encode($response);
+    }
 
 
     // read single class API

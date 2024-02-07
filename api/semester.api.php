@@ -47,6 +47,25 @@ class Semester extends DatabaseConnection
         echo json_encode($response);
     }
 
+    public function readSemesters($conn)
+    {
+        $response = [];
+        $data = [];
+
+        $query = "SELECT * FROM semester";
+        $result = $conn->query($query);
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $data []= $row;
+            }
+            $response = ['status' => true, 'data' => $data];
+        } else {
+            $response = ['status' => false, 'data' => $conn->error];
+        }
+
+        echo json_encode($response);
+    }
 
     // read single semester API
     public function read_single_semester_api($conn)
