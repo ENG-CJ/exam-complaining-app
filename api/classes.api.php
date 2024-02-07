@@ -29,7 +29,7 @@ class Classes extends DatabaseConnection
 
     // read all classes API
 
-    public function read_all_classes_api($conn)
+    public function read_all_class_api($conn)
     {
         $response = [];
         $data = [];
@@ -38,8 +38,8 @@ class Classes extends DatabaseConnection
         $result = $conn->query($query);
 
         if ($result) {
-            if ($row = $result->fetch_assoc()) {
-                $data = $row;
+            while($row = $result->fetch_assoc()) {
+                $data []= $row;
             }
             $response = ['status' => true, 'data' => $data];
         } else {
@@ -80,8 +80,8 @@ class Classes extends DatabaseConnection
             $result = $conn->query($query);
 
             if ($result) {
-                if ($row = $result->fetch_assoc()) {
-                    $data = $row;
+                while($row = $result->fetch_assoc()) {
+                    $data []= $row;
                 }
                 $response = ['status' => true, 'data' => $data];
             } else {
