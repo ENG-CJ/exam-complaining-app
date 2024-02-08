@@ -2,6 +2,8 @@
 readStudents(displayStudentData);
 readSemesters();
 readClasses();
+
+
 // variables
 
 // events related modals
