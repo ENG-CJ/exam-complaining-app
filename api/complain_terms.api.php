@@ -31,7 +31,6 @@ class ComplainTerms extends DatabaseConnection
     }
 
     // read all complain_terms API
-
     public function read_all_complain_terms_api($conn)
     {
         $response = [];

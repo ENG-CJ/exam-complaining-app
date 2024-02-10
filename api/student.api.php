@@ -1,6 +1,5 @@
 
 <?php
-
 include_once "../db/db.php";
 
 class Students extends DatabaseConnection
@@ -81,6 +80,7 @@ class Students extends DatabaseConnection
 
         echo json_encode($response);
     }
+
 
     public function readStudentsWithIdentifier()
     {
@@ -250,6 +250,43 @@ class Students extends DatabaseConnection
         if ($result)
             $hasUpdated = true;
         return $hasUpdated;
+    }
+
+    public function Login()
+    {
+        extract($_POST);
+        $response = [];
+        $data = [];
+
+        $query = "SELECT 
+        id,
+                    students.name as studentName,
+                    gender,
+                    mobile,
+                    address,
+                    semester.name as semester,
+                    semester.s_id,
+                    classes.name as className,
+                    classes.c_id,
+                    students.image,
+                    students.password
+                    FROM `students`
+                    JOIN semester
+                    ON students.semester_id=semester.s_id
+                    JOIN classes
+                    ON students.class_id=classes.c_id where students.id='$id' and students.password='$password'";
+        $result = Students::db()->query($query);
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+            $response = ['status' => true, 'data' => $data];
+        } else {
+            $response = ['status' => false, 'data' => Students::db()->error];
+        }
+
+        echo json_encode($response);
     }
 }
 
