@@ -257,22 +257,21 @@ class Students extends DatabaseConnection
         extract($_POST);
         $response = [];
         $data = [];
-
         $query = "SELECT 
         id,
                     students.name as studentName,
                     gender,
                     mobile,
                     address,
-                    semester.name as semester,
-                    semester.s_id,
+                    semesters.name as semester,
+                    semesters.s_id,
                     classes.name as className,
                     classes.c_id,
                     students.image,
                     students.password
                     FROM `students`
-                    JOIN semester
-                    ON students.semester_id=semester.s_id
+                    JOIN semesters
+                    ON students.semester_id=semesters.s_id
                     JOIN classes
                     ON students.class_id=classes.c_id where students.id='$id' and students.password='$password'";
         $result = Students::db()->query($query);
