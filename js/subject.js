@@ -93,8 +93,8 @@ function displaySubjectsData(data) {
     tr += `<td>${subject.semster}</td>`;
     tr += `<td>${subject.description}</td>`;
     tr += `<td>
-            <a  id ='${subject.id}' class='btn btn-secondary text-light deleteSubject'>Remove</a>
-            <a id ='${subject.id}' class='btn btn-success text-light editSubject'>Edit</a>
+            <a  id ='${subject.id}' class='btn btn-danger text-white deleteSubject'>Remove</a>
+            <a id ='${subject.id}' class='btn  editSubject'>Edit</a>
         </td>`;
     tr += "</tr>";
   });

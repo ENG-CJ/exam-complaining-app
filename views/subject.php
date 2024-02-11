@@ -29,7 +29,7 @@ include '../config/sidebar.php';
         color: white !important;
     }
 
-    .update_info {
+    .createSubject , .editSubject , .saveBtn {
         background-color: #0E0C28;
         color: white !important;
         margin: 5px;
@@ -100,7 +100,7 @@ include '../config/sidebar.php';
                         <div class="row gap-5">
                             <!-- Row with two columns -->
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <button class="btn btn-primary createSubject">
+                                <button class="btn createSubject">
                                     Add New Subject
                                 </button>
                             </div>
@@ -159,13 +159,10 @@ include '../config/sidebar.php';
                                 <label for="name" class="col-form-label">Description [Option]</label>
                                 <textarea name="" placeholder="More Description" id="" cols="30" rows="10" class="form-control description"></textarea>
                             </div>
-
-
-
-
+                            
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal" id="closeModal">Close</button>
-                                <button type="button" class="btn btn-primary save">Save</button>
+                                <button type="button" class="btn save saveBtn">Save</button>
                             </div>
                         </form>
                     </div>

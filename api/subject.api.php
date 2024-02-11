@@ -30,10 +30,10 @@ class Subjects extends DatabaseConnection
                 subjects.id,
                 subjects.name as subject,
                 subjects.description,
-                semester.name as semster
+                semesters.name as semster
                 FROM subjects
-                JOIN semester
-                ON subjects.semester_id=semester.s_id
+                JOIN semesters
+                ON subjects.semester_id=semesters.s_id
 ";
         $result = Subjects::db()->query($query);
 
@@ -79,10 +79,10 @@ class Subjects extends DatabaseConnection
                 subjects.id,
                 subjects.name as subject,
                 subjects.description,
-                semester.name as semster
+                semesters.name as semster
                 FROM subjects
-                JOIN semester
-                ON subjects.semester_id=semester.s_id where semester.name='$value'";
+                JOIN semesters
+                ON subjects.semester_id=semesters.s_id where semesters.name='$value'";
         $result =
             Subjects::db()->query($query);
 

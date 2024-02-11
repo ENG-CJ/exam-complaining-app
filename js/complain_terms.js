@@ -44,6 +44,8 @@ $('#complainTermsForm').on('submit', (e) => {
     const start_date = $('#start_date').val();
     const expire_date = $('#expire_date').val();
     const description = $('#description').val();
+    const status = $('#status').val();
+    const exam_type = $('#exam_type').val();
     let sendingData = {};
     if (btnAction === 'insert') {
         sendingData = {
@@ -51,6 +53,8 @@ $('#complainTermsForm').on('submit', (e) => {
             'start_date': start_date,
             'expire_date': expire_date,
             'description': description,
+            'exam_type': exam_type,
+            'status': status,
             'action': 'create_complain_terms_api'
         }
     }
@@ -61,6 +65,8 @@ $('#complainTermsForm').on('submit', (e) => {
             'start_date': start_date,
             'expire_date': expire_date,
             'description': description,
+            'exam_type': exam_type,
+            'status': status,
             'action': 'update_complain_terms_api'
         }
     }
@@ -111,17 +117,23 @@ function load_data() {
                     th = '<tr>';
 
                     for (let i in element) {
-                        th += `<th>${i}</th>`
+                        if (i !== 'created_at') {
+                            th += `<th>${i}</th>`
+                        }
                     }
                     th += '<th>Action</th>';
                     th += '</tr>';
 
                     for (let i in element) {
-                        tr += `<td>${element[i]}</td>`;
+                        if (i == 'description') {
+                            tr += `<td>${element[i].slice(0, 30)}...</td>`;
+                        } else if (i !== 'created_at') {
+                            tr += `<td>${element[i]}</td>`;
+                        }
                     }
                     tr += `
                 <td>
-                <a class='btn btn-primary text-white update_info' update_id="${element['term_id']}">Edit</a>
+                <a class='btn text-white update_info' update_id="${element['term_id']}">Edit</a>
                 <a class='btn btn-danger text-white delete_info' delete_id="${element['term_id']}">Delete</a>
                 </td>
                 `;
@@ -198,6 +210,8 @@ function read_single_complain_terms_fn(term_id) {
                 $("#start_date").val(response[0].start_date);
                 $("#expire_date").val(response[0].expire_date);
                 $("#description").val(response[0].description);
+                $("#status").val(response[0].status);
+                $("#exam_type").val(response[0].exam_type);
                 btnAction = 'update';
                 load_data();
             }

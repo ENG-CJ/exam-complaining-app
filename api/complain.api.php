@@ -158,6 +158,38 @@ class Complain extends DatabaseConnection
         }
         echo json_encode($response);
     }
+
+    // update complain status  API
+    public function update_complain_status_api($conn)
+    {
+        $response = [];
+        if (
+            !empty($_POST['com_id']) && !empty($_POST['status'])
+        ) {
+            $com_id = $_POST['com_id'];
+            $status = $_POST['status'];
+
+            // Check if complain exists
+            $check_query = "SELECT * FROM `complains` WHERE `com_id`='$com_id'";
+            $check_result = $conn->query($check_query);
+
+            if ($check_result && $check_result->num_rows > 0) {
+                $update_query = "UPDATE `complains` SET   `status` = '$status' WHERE `com_id`='$com_id'";
+                $update_result = $conn->query($update_query);
+
+                if ($update_result) {
+                    $response = ['status' => true, 'data' => 'Successfully updated'];
+                } else {
+                    $response = ['status' => false, 'data' => $conn->error];
+                }
+            } else {
+                $response = ['status' => false, 'data' => 'complain does not exist'];
+            }
+        } else {
+            $response = ['status' => false, 'data' => 'Missing required fields'];
+        }
+        echo json_encode($response);
+    }
 }
 $complain = new Complain;
 

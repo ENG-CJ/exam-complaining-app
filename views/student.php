@@ -29,7 +29,7 @@ include '../config/sidebar.php';
         color: white !important;
     }
 
-    .update_info {
+    .editStudent, .updatePassword , .saveBtn,  .createStudent {
         background-color: #0E0C28;
         color: white !important;
         margin: 5px;
@@ -98,7 +98,7 @@ include '../config/sidebar.php';
                         <div class="row gap-5">
                             <!-- Row with two columns -->
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <button class="btn btn-primary createStudent">
+                                <button class="btn createStudent">
                                     Create Student
                                 </button>
                             </div>
@@ -193,7 +193,7 @@ include '../config/sidebar.php';
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal" id="closeModal">Close</button>
-                                <button type="button" class="btn btn-primary save">Save</button>
+                                <button type="button" class="btn save saveBtn">Save</button>
                             </div>
                         </form>
                     </div>

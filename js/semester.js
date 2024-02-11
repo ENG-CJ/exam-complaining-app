@@ -117,7 +117,7 @@ function load_data() {
                     }
                     tr += `
                 <td>
-                <a class='btn btn-primary text-white update_info' update_id="${element['s_id']}">Edit</a>
+                <a class='btn text-white update_info' update_id="${element['s_id']}">Edit</a>
                 <a class='btn btn-danger text-white delete_info' delete_id="${element['s_id']}">Delete</a>
                 </td>
                 `;

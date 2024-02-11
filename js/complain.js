@@ -37,14 +37,15 @@ function load_data() {
                     th += '</tr>';
 
                     for (let i in element) {
-                        tr += `<td>${element[i]}</td>`;
+                        if (i == 'status') {
+                            tr += `<td>
+                             <a class='btn text-white update_info' update_id="${element['com_id']}">${element[i]}</a>
+                            </td>`;
+                        }else{
+                            tr += `<td>${element[i]}</td>`;
+                        }
+                        
                     }
-                //     tr += `
-                // <td>
-                // <a class='btn btn-primary text-white update_info' update_id="${element['id']}">Edit</a>
-                // <a class='btn btn-danger text-white delete_info' delete_id="${element['id']}">Delete</a>
-                // </td>
-                // `;
                     tr += '</tr>';
                 });
             }
@@ -56,3 +57,37 @@ function load_data() {
         }
     });
 }
+
+
+function update_complain_status_fn(com_id) {
+    const sendingData = {
+        'com_id': com_id,
+        'status': 'completed',
+        'action': 'update_complain_status_api'
+    }
+
+    $.ajax({
+        method: 'POST',
+        dataType: 'json',
+        url: '../api/complain.api.php',
+        data: sendingData,
+        success: (res) => {
+            const status = res.status;
+            const message = res.data;
+            if (status) {
+                alert(message)
+                load_data();
+            } else {
+                alert(message);
+            }
+        },
+        error: (err) => {
+            console.log('Failed to delete table data', err.responseText);
+        }
+    })
+}
+
+$("#tableData tbody").on('click', 'a.update_info', function () {
+    let com_id = $(this).attr('update_id');
+    update_complain_status_fn(com_id);
+})

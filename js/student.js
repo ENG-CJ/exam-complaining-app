@@ -170,8 +170,8 @@ function displayStudentData(data) {
             <a studentID = '${student.id}' class='btn btn-brand text-dark btn-rounded updatePassword' title='update password for this student'>Update</a>
         </td>`;
     tr += `<td>
-            <a  id ='${student.id}' class='btn btn-secondary text-light deleteStudent'>Remove</a>
-            <a id ='${student.id}' class='btn btn-success text-light editStudent'>Edit</a>
+            <a  id ='${student.id}' class='btn btn-danger text-white deleteStudent'>Remove</a>
+            <a id ='${student.id}' class='btn  editStudent'>Edit</a>
         </td>`;
     tr += "</tr>";
   });

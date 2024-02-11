@@ -158,7 +158,7 @@ include '../config/sidebar.php';
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="closeModal">Close</button>
-                                <button type="submit" class="btn btn-primary saveBtn">Save</button>
+                                <button type="submit" class="btn saveBtn">Save</button>
                             </div>
                         </form>
                     </div>

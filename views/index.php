@@ -14,20 +14,12 @@ include '../config/sidebar.php';
             <!-- pageheader  -->
             <!-- ============================================================== -->
             <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="page-header">
-                        <h2 class="pageheader-title">Exam Complening App</h2>
-                        <div class="page-breadcrumb">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-header">
+                    <h2 class="pageheader-title">Dashboard</h2>
                 </div>
             </div>
+        </div>
             <!-- ============================================================== -->
             <!-- end pageheader  -->
             <!-- ============================================================== -->
@@ -41,7 +33,7 @@ include '../config/sidebar.php';
                             <div class="card-body">
                                 <h5 class="text-muted">Users</h5>
                                 <div class="metric-value d-inline-block">
-                                    <h1 class="mb-1">12099</h1>
+                                    <h1 class="mb-1" id="users"></h1>
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                     <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.86%</span>
@@ -60,7 +52,7 @@ include '../config/sidebar.php';
                             <div class="card-body">
                                 <h5 class="text-muted">Students</h5>
                                 <div class="metric-value d-inline-block">
-                                    <h1 class="mb-1">1245</h1>
+                                    <h1 class="mb-1" id="students"></h1>
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                     <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">10%</span>
@@ -79,7 +71,7 @@ include '../config/sidebar.php';
                             <div class="card-body">
                                 <h5 class="text-muted">Classes</h5>
                                 <div class="metric-value d-inline-block">
-                                    <h1 class="mb-1">13000</h1>
+                                    <h1 class="mb-1 " id="classes"></h1>
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                     <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5%</span>
@@ -98,7 +90,7 @@ include '../config/sidebar.php';
                             <div class="card-body">
                                 <h5 class="text-muted">Complains</h5>
                                 <div class="metric-value d-inline-block">
-                                    <h1 class="mb-1">1340</h1>
+                                    <h1 class="mb-1" id="complains"></h1>
                                 </div>
                                 <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
                                     <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">4%</span>
@@ -117,3 +109,4 @@ include '../config/sidebar.php';
     <?php
     include '../config/footer.php';
     ?>
+        <script src="../js/index.js"></script>

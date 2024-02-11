@@ -9,14 +9,16 @@ class ComplainTerms extends DatabaseConnection
         $response = [];
         if (
             !empty($_POST['subject_length']) && !empty($_POST['start_date']) && !empty($_POST['expire_date'])
-            && !empty($_POST['description'])
+            && !empty($_POST['description']) && !empty($_POST['status']) && !empty($_POST['exam_type'])
         ) {
             $subject_length = $_POST['subject_length'];
             $start_date = $_POST['start_date'];
             $expire_date = $_POST['expire_date'];
             $description = $_POST['description'];
-            $query = "INSERT INTO `complain_terms`(`subject_length`, `start_date`,`expire_date`,`description`) 
-            VALUES ('$subject_length','$start_date','$expire_date','$description')";
+            $status = $_POST['status'];
+            $exam_type = $_POST['exam_type'];
+            $query = "INSERT INTO `complain_terms`(`subject_length`, `start_date`,`expire_date`,`description`,`status`,`exam_type`) 
+            VALUES ('$subject_length','$start_date','$expire_date','$description','$status','$exam_type)";
             $result = $conn->query($query);
             if ($result) {
                 $response = ['status' => true, 'data' => 'successfully created'];
@@ -127,21 +129,23 @@ class ComplainTerms extends DatabaseConnection
         $response = [];
         if (
             !empty($_POST['term_id']) && !empty($_POST['subject_length']) && !empty($_POST['start_date']) && !empty($_POST['expire_date'])
-            && !empty($_POST['description'])
+            && !empty($_POST['description'])  && !empty($_POST['status']) && !empty($_POST['exam_type'])
         ) {
             $term_id = $_POST['term_id'];
             $subject_length = $_POST['subject_length'];
             $start_date = $_POST['start_date'];
             $expire_date = $_POST['expire_date'];
             $description = $_POST['description'];
-
+            $status = $_POST['status'];
+            $exam_type = $_POST['exam_type'];
             // Check if complain_terms exists
             $check_query = "SELECT * FROM `complain_terms` WHERE `term_id`='$term_id'";
             $check_result = $conn->query($check_query);
 
             if ($check_result && $check_result->num_rows > 0) {
                 $update_query = "UPDATE `complain_terms` SET `subject_length`='$subject_length',`start_date`='$start_date' , 
-                `expire_date` = '$expire_date' , `description` = '$description' WHERE `term_id`='$term_id'";
+                `expire_date` = '$expire_date' , `description` = '$description' ,
+                `status` = '$status' , `exam_type` = '$exam_type' WHERE `term_id`='$term_id'";
                 $update_result = $conn->query($update_query);
 
                 if ($update_result) {

@@ -82,7 +82,7 @@ include '../config/sidebar.php';
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
                     <h2 class="pageheader-title">Complain Terms</h2>
-                    <p>Manage Complain Terms  Operations</p>
+                    <p>Manage Complain Terms Operations</p>
 
                 </div>
             </div>
@@ -149,13 +149,26 @@ include '../config/sidebar.php';
                                 <input id="expire_date" name="expire_date" type="date" class="form-control p-3">
                             </div>
                             <div class="form-group">
+                                <label for="exam_type">Exam type</label>
+                                <select name="exam_type" id="exam_type" class="form-control" style="color: black;">
+                                    <option value="Final exam">Final Exam</option>
+                                    <option value="Midterm exam">Midterm Exam</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exam_type">Status</label>
+                                <select name="status" id="status" class="form-control" style="color: black;">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea name="description" id="description" cols="30" rows="10"
-                                class="form-control" placeholder="Enter description" ></textarea>
+                                <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Enter description"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="closeModal">Close</button>
-                                <button type="submit" class="btn btn-primary saveBtn">Save</button>
+                                <button type="submit" class="btn saveBtn">Save</button>
                             </div>
                         </form>
                     </div>
