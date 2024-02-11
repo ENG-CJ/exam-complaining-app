@@ -6,6 +6,7 @@ class Complain extends DatabaseConnection
     // create complain API
     public function create_complain_api($conn)
     {
+        // extract($_POST);
         $response = [];
         if (
             !empty($_POST['subjects']) && !empty($_POST['std_id']) && !empty($_POST['description'])
