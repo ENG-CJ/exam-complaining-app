@@ -95,6 +95,27 @@ class Complain extends DatabaseConnection
         }
         echo json_encode($response);
     }
+    public function readSingleComplainWithStudent($conn)
+    {
+        extract($_POST);
+        $response = [];
+        $data = [];
+      
+            $query = "SELECT com_id,subjects,description,date, status FROM `complains` WHERE 
+                        std_id='$id' and status='pending' ORDER BY date DESC";
+            $result = $conn->query($query);
+
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $data[] = $row;
+                }
+                $response = ['status' => true, 'data' => $data];
+            } else {
+                $response = ['status' => false, 'data' => $conn->error];
+            }
+       
+        echo json_encode($response);
+    }
 
 
     public function delete_complain_api($conn)
